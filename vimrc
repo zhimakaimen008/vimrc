@@ -1,3 +1,5 @@
+" vim configuration
+
 " Enable vim cool features
 set nocompatible
 
@@ -96,5 +98,3 @@ set visualbell
 
 " Enable mouse
 set mouse=a
-
-
