@@ -1,3 +1,5 @@
+![](https://github.com/zhimakaimen008/vimrc/blob/master/images/vim.png)
+
 Vim是一个非常强大的文本编辑器，加上合适的配置，绝对是程序员的好帮手。
 
 ## 如何使用
