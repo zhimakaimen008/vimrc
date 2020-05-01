@@ -1,104 +1,100 @@
-Vim是一个非常强大的文本编辑器，加上合适的配置，绝对是程序员的好帮手。
-
-Vim的配置文件为：.vimrc，要放到根目录下面，即~/.vimrc。对于刚开始接触Vim的同学，很容易对里面的配置含义一头雾水，这里对常用的配置做下解释说明。
-
-1、采用vim自己的命令，不与vi兼容：
+" Enable vim cool features
 set nocompatible
 
-2、不创建备份文件：
+" No backup files
 set nobackup
 
-3、使能语法高亮，自动识别代码，用不同颜色显示：
+" Enable highlight syntax
 syntax on
 
-4、使用编码格式 utf-8 ：
+" Set utf8 as standard encoding
 set encoding=utf-8
 
-5、区分大小写：
+" Infere the case-sensitivity
 set infercase
 
-6、不许文件自动折叠：
+" No folding allowed
 set nofoldenable
 
-7、换行显示时不把一个单词拆开，遇到指定的符号（比如空格、连词号和其他标点符号）才换行：
+" Do not split word when linebreak
 set linebreak
 
-8、在左侧显示行号：
+" Display line numbers on the left
 set number
 
-9、显示光标当前行
+" Hightlight current line
 set cursorline
 
-10、在状态栏显示光标当前位置，哪一行哪一列：
+" Show current position along the bottom
 set ruler
 
-11、高亮显示搜索的匹配结果，输入结束时才显示：
+" Highlight the word when searching for it
 set hlsearch
 
-12、高亮显示搜索的匹配过程，每输入一个字符，就自动跳到第一个匹配的结果：
+" Show search matches as you type
 set incsearch
 
-13、遇到括号（小括号、中括号、大括号）时，自动高亮匹配的括号：
+" Show the matching brackets
 set showmatch
 
-14、命令模式下，显示输入的命令：
+" Show the command being typed
 set showcmd
 
-15、自动缩进，按下回车键后，下一行会自动跟上一行的缩进保持一致：
+" Keep indentation when press the enter key
 set autoindent
 
-16、智能缩进
+" Smart indentation
 set smartindent
 
-17、复制粘贴时保留原有的缩进
+" Copy the previous indentation on autoindent
 set copyindent
 
-18、自动缩进的空格数
+" Number of spaces for autoindent
 set shiftwidth=4
 
-19、按下 tab 键时的空格数
+" Number of spaces when press the tab key
 set tabstop=4
 
-20、按下 tab 键时自动转为空格
+" Replace tab by spaces
 set expandtab
 
-21、tab 转换为多少个空格
+" Number of spaces tab turn into
 set softtabstop=4
 
-22、将tab键和多余的空格显示出来
+" Show tabs and trailing whitespace
 set list
 set listchars=tab:>>,trail:.
 
-23、在命令模式下，按下 tab 键可以自动补全命令
+" Tab behave like bash in command line mode
 set wildmenu
 set wildmode=longest,list,full
 
-24、Insert模式下，使退格键可以删掉任何东西
+" Allow backspace over everything in insert mode
 set backspace=indent,eol,start
 
-25、即使发生换行时，也逐行移动
+" Move line by line even when the line is wrapped
 map j gj
 map k gk
 
-26、重新打开文件时，跳到上次的位置
+" Jump to the last position when reopening a file
 au BufReadPost *
 \ if line("'\"") > 1 && line("'\"") <= line("$") |
 \ exe "normal! g'\"" |
 \ endif
 
-27、自动切换到当前文件的目录
+" Always switch to the current file dir
 set autochdir
 
-28、记录历史命令的条数
+" Number of command history
 set history=1000
 
-29、撤销的次数
+" Levels of undo
 set undolevels=1000
 
-30、发生错误时，视觉提示，通常是屏幕闪烁：
+" Screen blink when error happens
 set visualbell
 
-31、支持使用鼠标
+" Enable mouse
 set mouse=a
 
 
